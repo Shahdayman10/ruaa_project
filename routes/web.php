@@ -14,5 +14,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return response()->json([
+        'message' => 'مرحباً بك في API المشروع',
+        'version' => '1.0.0',
+        'endpoints' => [
+            'POST /api/auth/login' => 'تسجيل الدخول',
+            'POST /api/auth/register' => 'إنشاء حساب جديد',
+            'GET /api/user' => 'بيانات المستخدم (يتطلب token)',
+            'POST /api/auth/logout' => 'تسجيل الخروج (يتطلب token)'
+        ]
+    ]);
 });
+

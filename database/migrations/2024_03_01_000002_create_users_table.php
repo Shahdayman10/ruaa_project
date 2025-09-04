@@ -17,6 +17,7 @@ return new class extends Migration
             $table->enum('role', ['parent', 'school_manager', 'supervisor', 'admin']);
             $table->rememberToken();
             $table->timestamps();
+
         });
     }
 
