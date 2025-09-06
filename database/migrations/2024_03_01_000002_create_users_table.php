@@ -13,11 +13,13 @@ return new class extends Migration
             $table->string('name');
             $table->string('profile_image')->nullable();
             $table->string('email')->unique();
+            $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->enum('role', ['parent', 'school_manager', 'supervisor', 'admin']);
+            $table->string('google_id')->nullable();
+            $table->string('avatar')->nullable();
             $table->rememberToken();
             $table->timestamps();
-
         });
     }
 

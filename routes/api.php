@@ -19,6 +19,11 @@ use App\Http\Controllers\Auth\AuthController;
 Route::post('/auth/login', [AuthController::class, 'login']);
 Route::post('/auth/register', [AuthController::class, 'register']);
 
+// Google OAuth Routes
+Route::get('/auth/google', [AuthController::class, 'redirectToGoogle']);
+Route::get('/auth/google/callback', [AuthController::class, 'handleGoogleCallback']);
+Route::post('/auth/google/login', [AuthController::class, 'loginWithGoogle']);
+
 // Protected Routes (require authentication)
 Route::middleware('auth:sanctum')->group(function () {
     Route::get('/user', [AuthController::class, 'user']);

@@ -25,7 +25,7 @@ class RegisterRequest extends FormRequest
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
-            'user_type' => 'nullable|string|in:parent,supervisor,school_manager',
+            'role' => 'nullable|string|in:parent,supervisor,school_manager',
         ];
     }
 
@@ -43,7 +43,7 @@ class RegisterRequest extends FormRequest
             'password.required' => 'كلمة المرور مطلوبة',
             'password.min' => 'كلمة المرور يجب أن تكون 6 أحرف على الأقل',
             'password.confirmed' => 'تأكيد كلمة المرور غير متطابق',
-            'user_type.required' => 'نوع المستخدم مطلوب',
+            'role.required' => 'نوع المستخدم مطلوب',
         ];
     }
 }
