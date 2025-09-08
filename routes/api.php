@@ -3,6 +3,9 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AuthController;
+use App\Http\Controllers\Auth\ForgotPasswordController;
+use App\Http\Controllers\Auth\ResetPasswordController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -24,8 +27,23 @@ Route::get('/auth/google', [AuthController::class, 'redirectToGoogle']);
 Route::get('/auth/google/callback', [AuthController::class, 'handleGoogleCallback']);
 Route::post('/auth/google/login', [AuthController::class, 'loginWithGoogle']);
 
+// إرسال رابط إعادة التعيين
+Route::post('/auth/forgot-password', [ForgotPasswordController::class, 'sendResetLinkEmail']);
+
+// تعيين كلمة مرور جديدة
+
+Route::post('/auth/reset-password', [ResetPasswordController::class, 'reset']);
+
 // Protected Routes (require authentication)
 Route::middleware('auth:sanctum')->group(function () {
     Route::get('/user', [AuthController::class, 'user']);
     Route::post('/auth/logout', [AuthController::class, 'logout']);
 });
+
+// إرسال رابط إعادة التعيين
+Route::post('/auth/forgot-password', [ForgotPasswordController::class, 'sendResetLinkEmail
+']);
+
+// تعيين كلمة مرور جديدة
+Route::post('/auth/reset-password', [ResetPasswordController::class, 'reset']);
+Route::post('/auth/reset-password', [ResetPasswordController::class, 'reset']);
