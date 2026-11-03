@@ -4,12 +4,19 @@
 **رؤى** منصة ويب تعليمية تهدف إلى تطوير آلية تقييم المدارس في فلسطين، من خلال توفير بيئة رقمية موحدة تتيح لأولياء الأمور والمشرفين التربويين تقييم المدارس وفق معايير واضحة، وتعزز الشفافية والتواصل بين الأسرة والمؤسسة التعليمية.
 
 ---
+## Screenshots
+
+### Home Page
+![Ruaa Home Page](screenshots/ruuaa-homepage-full.jpg)
 
 ## About the Project
 
 Ru'a addresses the lack of a unified digital platform for evaluating schools in Palestine, where parents often rely on personal impressions and verbal recommendations when choosing schools for their children.
 
 The platform provides a structured evaluation system that brings together parents, school managers, educational supervisors, and administrators to support informed decision-making and continuous school improvement.
+
+### About Page
+![Ruaa about](screenshots/roaa-about.jpg)
 
 ### Project Objectives
 
