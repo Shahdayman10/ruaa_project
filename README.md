@@ -16,7 +16,7 @@ Ru'a addresses the lack of a unified digital platform for evaluating schools in 
 The platform provides a structured evaluation system that brings together parents, school managers, educational supervisors, and administrators to support informed decision-making and continuous school improvement.
 
 ### About Page
-![Ruaa about](screenshots/roaa-about.jpg)
+![Ruaa about](screenshots/roaa-about.png)
 
 ### Project Objectives
 
